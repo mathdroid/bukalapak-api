@@ -20,7 +20,7 @@ const getApiToken = ({ username, password }) =>
 const facebookLogin = ({ facebookId, facebookToken }) =>
   fetch({
     method: HTTP.POST,
-    url: ENDPOINTS.FACEBOOK_LOGIN,
+    url: ENDPOINTS.FACEBOOK_LOGIN(),
     data: {
       facebook_id: facebookId,
       facebook_token: facebookToken
@@ -30,7 +30,7 @@ const facebookLogin = ({ facebookId, facebookToken }) =>
 const googleLogin = ({ email, googleToken }) =>
   fetch({
     method: HTTP.POST,
-    url: ENDPOINTS.GOOGLE_LOGIN,
+    url: ENDPOINTS.GOOGLE_LOGIN(),
     data: {
       email,
       google_token: googleToken
