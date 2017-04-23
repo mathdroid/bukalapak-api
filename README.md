@@ -30,9 +30,11 @@ logToken(USER)
 
 ### Authentication
 
+#### Get API Token
+
 - `getApiToken({ username: String, password: String })`
 
-#### Success Response
+##### Success Response
 
 ```json
 {
@@ -47,7 +49,7 @@ logToken(USER)
 }
 ```
 
-#### Failure response
+##### Failure response
 
 ```json
 {
@@ -62,9 +64,11 @@ logToken(USER)
 }
 ```
 
+#### Facebook Login
+
 - `facebookLogin({ facebookId: String, facebookToken: String })`
 
-#### Success Response
+##### Success Response
 
 ```json
 {
@@ -76,7 +80,7 @@ logToken(USER)
 }
 ```
 
-#### Failure response
+##### Failure response
 
 ```json
 {
@@ -85,9 +89,11 @@ logToken(USER)
 }
 ```
 
+#### Google Login
+
 - `googleLogin({ email: String, googleToken: String })`
 
-#### Success Response
+##### Success Response
 
 ```json
 {
@@ -99,7 +105,7 @@ logToken(USER)
 }
 ```
 
-#### Failure response
+##### Failure response
 
 ```json
 {
