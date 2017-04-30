@@ -14,7 +14,7 @@ const USER = {
 
 async function logToken (user) {
   try {
-    const { status, token, confirmed } = await getApiToken(user)
+    const { status, token, confirmed } = await authentication.getApiToken(user)
     console.log(token)
   } catch (error) {
     const {message} = error
