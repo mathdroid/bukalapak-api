@@ -14,7 +14,9 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.4.0",
-    "np": "^2.13.2"
+    "np": "^2.13.2",
+    "axios": "^0.16.1",
+    "bluebird": "^3.5.0"
   },
   "scripts": {
     "release": "np",

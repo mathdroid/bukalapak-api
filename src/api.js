@@ -7,16 +7,15 @@ const api = create({
   timeout: 10000
 });
 
-api.fetch = ({ method, url, params, data, auth }) =>
-  api({
+api.fetch = ({ method, url, params, data, auth }) => {
+  const payload = /(post|put|patch)/i.test(method) && data;
+
+  return api({
     method,
     url,
     params,
     auth,
-    data: (/post/i.test(method) ||
-      /put/i.test(method) ||
-      /patch/i.test(method)) &&
-      data
+    data: payload
   })
     .then(({ data }) => {
       return resolve(data);
@@ -25,5 +24,6 @@ api.fetch = ({ method, url, params, data, auth }) =>
       const { response: { data } } = err;
       return reject(data);
     });
+};
 
 module.exports = api;
