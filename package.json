@@ -14,13 +14,15 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.4.0",
-    "np": "^2.13.2",
-    "axios": "^0.16.1",
-    "bluebird": "^3.5.0"
+    "np": "^2.13.2"
   },
   "scripts": {
     "release": "np",
     "prepublish": "npm run build",
     "build": "babel src -d dist"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "bluebird": "^3.5.0"
   }
 }
